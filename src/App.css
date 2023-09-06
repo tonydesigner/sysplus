@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;1,200;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Source Sans Pro", sans-serif;
+  background-image: url("https://img.freepik.com/vetores-gratis/detalhe-de-textura-de-dinheiro-gradiente_23-2149394645.jpg?w=360");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.brd {
+  border: 1px solid;
+}
+
+:root {
+  --bg: #f7f7f7;
+  --corText: #ccc;
+  --tela: flex;
+  --ai: center;
+  --jc: center;
+  --jca: space-around;
+  --jcb: space-between;
+}
+
+.center {
+  display: var(--tela);
+  align-items: var(--ai);
+  justify-content: var(--jc);
+}
+
+.margin {
+  display: var(--tela);
+  align-items: var(--ai);
+  justify-content: var(--jca);
+}
+
+.space {
+  display: var(--tela);
+  align-items: var(--ai);
+  justify-content: var(--jcb);
+}
+
+.container {
+  height: 100vh;
+}
+
+.menu {
+  background: linear-gradient(#57bff7, #57f7df);
+  padding: 1em;
+  width: 80px;
+  height: auto;
+  box-shadow: 5px 5px 10px #666;
+}
+
+.menu ul li {
+  width: 80px;
+  list-style: none;
+  padding: 0.3em;
+}
+
+.home,
+.teste,
+.prod,
+.componente,
+.recibo,
+.convert {
+  width: 100vw;
+  height: 100vh;
+  padding: 1em;
+  background-color: var(--bg);
+}
+
+.home {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "cima cima cima lateral"
+    "le meio meio lateral"
+    "fim fim fim lateral ";
+  gap: 0.5rem;
+}
+
+.cima {
+  grid-area: cima;
+}
+
+.meio {
+  grid-area: meio;
+  grid-column: span 2;
+}
+.le {
+  grid-area: le;
+  text-align:center;
+}
+
+.lateral {
+  grid-area: lateral;
+  grid-row: span 3;
+}
+
+.fim {
+  grid-area: fim;
+}
+
+.finan {
+  width: 100vw;
+  height: 100vh;
+  padding: 1em;
+}
+
+.teste {
+  text-align: center;
+}
+
+.dados {
+  width: 50%;
+}
+
+.ai,
+.tb {
+  font-size: 25pt;
+  color: #fff;
+  margin: 0.2em 0;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+}
+
+.form {
+  text-align: center;
+}
+
+.form input {
+  width: 135px;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: 0;
+  margin: 0 0.5rem;
+  text-align: center;
+}
+
+.btn {
+  display: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 0.5rem;
+  background-color: green;
+  color: #fff;
+  margin: 2rem 10rem;
+  cursor: pointer;
+}
+
+#i {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#i h2 {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-style: italic;
+}
+
+#i span {
+  font-style: italic;
+  margin: 0 5rem;
+}
+
+.orcado {
+  width: 100%;
+  display: none;
+}
+
+.orcado table {
+  width: 65%;
+  text-align: center;
+}
+
+.meio {
+  width: 55%;
+}
+
+.tableTHeader {
+  font-weight: bold;
+  border-bottom: 2px solid;
+}
+
+.campos {
+  display: none;
+  height: 85px;
+}
+
+.result {
+  width: 65%;
+  margin: 0 auto;
+  text-align: right;
+  padding: 1rem;
+  display: none;
+}
+
+.result strong {
+  font-size: 18pt;
+  margin: 0 2rem;
+}
+
+/* topo orçamento */
+.topo {
+  height: auto;
+  display: none;
+  padding: 1rem;
+}
+
+.logo {
+  width: 50%;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.info {
+  width: 50%;
+  text-align: left;
+  padding: 1rem;
+}
+
+.vuni {
+  display: none;
+}
+
+.cliente {
+  display: none;
+}
+
+.cliente input {
+  width: 350px;
+}
+
+.cliCad {
+  height: 80px;
+  text-align: left;
+  padding: 1rem;
+}
+
+.cliCad h3,
+p {
+  margin: 0 3rem;
+}
+
+.pag {
+  height: auto;
+  padding: 2rem;
+  display: none;
+  text-align: center;
+}
+
+.forma {
+  width: 50%;
+  text-align: left;
+  margin-left: 9rem;
+}
+
+.forma img {
+  width: 100px;
+}
+
+.entrega {
+  width: 50%;
+}
+
+/* grid */
+.componente {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.box {
+  padding:1rem;
+  gap: 1rem;
+}
+
+.caixa {
+  width: 30%;
+  height: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 2px 5px 10px #ccc;
+  border: 0;
+  cursor: pointer;
+}
+
+.recibo form {
+  width: 650px;
+  margin: 0 auto;
+}
+
+.recibo input {
+  width: 250px;
+  height: 35px;
+  margin: 0.3rem 0.3rem;
+  padding: 1rem;
+}
+
+.mostra {
+  display: none;
+  width: 820px;
+  padding: 1rem;
+  margin: 0 auto;
+  height: auto;
+  background-image: url("https://img.freepik.com/vetores-gratis/detalhe-de-textura-de-dinheiro-gradiente_23-2149394645.jpg?w=360");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mostra h1 {
+  text-align: center;
+}
+
+.topoRecibo {
+  height: 40px;
+  padding: 0.5rem;
+  background: linear-gradient(#57bff7, #57f7df);
+  border-radius: 1rem;
+}
+
+.topoRecibo span {
+  font-weight: bold;
+  font-size: 15pt;
+}
+
+.baseRecibo {
+  font-size: 18pt;
+  padding: 2rem;
+}
+
+.baseRecibo span {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.diaRecibo img {
+  width: 100px;
+  margin: 2rem 0;
+}
+
+.campoServ {
+  width: 510px !important;
+}
+
+.ass img {
+  width: 150px;
+}
+
+.comVisual form,
+.prod form {
+  width: 350px;
+  padding: 1rem;
+}
+
+.comVisual {
+  margin: 3rem 0;
+}
+.comVisual input,
+.prod input {
+  width: 100%;
+  border-radius: 0.5rem;
+  height: 35px;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+.comVisual select {
+  width: 100%;
+  height: 35px;
+  padding: 0.5rem;
+}
+.produto {
+  padding: 1rem;
+}
+
+.componente {
+  display: grid;
+  grid-template-areas:
+    "tpo tpo tpo base"
+    "assaid saida saida base"
+    "rodape rodape rodape rodape";
+    gap: 1rem
+}
+
+.tpo {
+  grid-area: tpo;
+  background: red;
+  padding: 1rem
+}
+
+.assaid {
+  background: green;
+  grid-area: assaid;
+}
+.base {
+  grid-area: base;
+  background: pink
+}
+.saida {
+  grid-area: saida;
+  background: blue
+}
+.rodape {
+  grid-area: rodape;
+  background: orange;
+  
+}
+
+@media print {
+  .form span,
+  .menu,
+  .recibo form {
+    display: none;
+  }
+
+  .btn {
+    display: none !important;
+  }
+
+  .mostra {
+    width: 100%;
+  }
+}
